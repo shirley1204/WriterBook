@@ -1,0 +1,53 @@
+<div class="readContentPage">
+{{#each content}}
+<div class="jumbotron">
+    <div class="card-image">
+          {{#if user}}
+            {{{editIcon user.id ../user.id id}}}
+          {{/if}}
+        </div>
+    <h3 class="center">{{title}}</h3>
+   <div class="center">{{stripTags description}}</div>
+   <h6>Status:{{status}}</h6>
+   
+{{#if allowComments}}
+      
+         
+         <form method="POST" action="/contents/comment/{{_id}}">
+              <div class="input-field">
+                <textarea class="materialize-textarea" name="commentBody"></textarea>
+                <label> Add Comment</label>
+              </div>
+              <input type="submit" value="ADD COMMENT" class="btn orange darken-4">
+            </form>
+            <br>
+<div class="divider"></div>
+            {{#each comments}}
+        
+            <h6>{{commentBody}}</h6>
+            <div class="chip">
+              Comment by:
+              <a href="#">{{commentUser}}</a>
+            </div>
+           
+       
+      {{/each}}
+         
+          {{/if}}
+
+<div class="divider"></div>
+
+{{else}}
+<h1>No Content Found</h1>
+
+<div class="divider"></div>
+{{/each}} 
+</div>
+
+
+
+</div>
+
+
+
+

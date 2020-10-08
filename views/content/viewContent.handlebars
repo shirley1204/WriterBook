@@ -1,0 +1,38 @@
+<div class="readContentPage">
+  {{#each content}}
+  <div class="jumbotron">
+    <h3 class="center">{{title}}</h3>
+    <div>{{stripTags description}}</div>
+    <h6>Status:{{status}}</h6>
+
+    <br><br>
+    <div class="row" style="margin-left: 10px; display:flex">
+      <a class="btn orange darken-3" href="/edit/content/{{_id}}">Edit</a>
+
+      <Form action="/delete/content/{{_id}}?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" class="btn btn-block" value="delete" style="margin-left: 20px;">
+      </Form>
+    </div>
+
+    {{#if allowComments}}
+    <h5>Comments:</h5>
+    {{#each comments}}
+    <h6>{{commentBody}}</h6>
+    <div class="chip">
+      Comment by:
+      <a href="#">{{commentUser}}</a>
+    </div>
+
+
+    {{/each}}
+
+    {{/if}}
+
+    <div class="divider"></div>
+    {{else}}
+    <h1>No Content Found</h1>
+    <div class="divider"></div>
+    {{/each}}
+  </div>
+</div>

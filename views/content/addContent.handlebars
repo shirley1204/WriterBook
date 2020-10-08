@@ -1,0 +1,35 @@
+<h4>Add Content</h4>
+<div>
+    <form action="/addContent" method="POST">
+       <div class="input-field">
+                <input type="text" id="title" name="title">
+                <label for="title">Title</label></div>
+            
+       <div class="input-field"></div>
+                <select id="status" name="status">
+                    <option value="public" selected>Public</option>
+                    <option value="private">Private</option>
+                </select>
+                <label for="status">Status</label>
+           </div>
+    <br>
+    <br>
+    <div>
+      <p>
+        <label>
+          <input name="allowComments" type="checkbox"  checked="checked" class="filled-in">
+          <span>Allow Comments</span>
+        </label>
+      </p>
+    </div>
+            <div class="input-field">
+                <h6>Write Your Content:</h6>
+                <textarea id="description" name="description"></textarea>
+            </div>
+        
+     <div>
+            <input type="submit" value="ADD" class="btn orange darken-4">
+            <a href="/newsfeed" class="btn pink darken-4">Cancel</a>
+        </div>
+    </form>
+</div>

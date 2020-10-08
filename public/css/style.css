@@ -1,0 +1,39 @@
+.navitem li a:hover {
+  color: #e65100;
+  font-weight: 600;
+}
+.logocolor {
+  color: #e65100;
+}
+#loginLayout {
+  background-image: url("../images/img6.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  opacity: 0.8;
+}
+
+.readContentPage {
+  /* border:2px solid black; */
+  display: inline-flexbox;
+}
+
+.logoimg {
+  height: 150px;
+  width: 280px;
+}
+
+/* Newspeed page */
+
+/* #mainPage{
+   
+    width: 100%;
+    border:2px solid white;
+    background-image: url('../images/mainpage.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+} */
